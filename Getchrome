@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chrome Version</title>
+  </head>
+  <body>
+    <div>
+      <h1>Please find below Chrome Version</h1>
+      <p id="demo"></p>
+      <script>
+        (function getChromeVersion() {
+          var Version = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+          document.getElementById("demo").innerHTML = Version
+            ? parseInt(Version[2], 10)
+            : false;
+        })();
+      </script>
+    </div>
+  </body>
+</html>
